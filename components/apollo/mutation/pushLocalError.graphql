@@ -1,0 +1,7 @@
+mutation PushLocalError($message: String!, $name: String!, $statusCode: Number!) {
+  pushLocalError(message: $message, name: $name, statusCode: $statusCode) @client {
+    message
+    name
+    statusCode
+  }
+}

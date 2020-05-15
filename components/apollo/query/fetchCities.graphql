@@ -1,0 +1,7 @@
+query allCities($countryIso: String, $countryStateIso: String) {
+  allCities(filter: { countryIso: $countryIso, countryStateIso: $countryStateIso }) {
+    id
+    name
+    countryState { isoCode }
+  }
+}

@@ -1,0 +1,22 @@
+import serializer from 'jest-emotion';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import Burger from './Burger';
+
+expect.addSnapshotSerializer(serializer);
+
+const burger = () => shallow(<Burger />);
+
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {
+    primaryColor: process.env.PRIMARY_COLOR,
+  },
+}));
+
+describe('Burger', () => {
+  it('renders correctly', () => {
+    expect(shallowToJson(burger())).toMatchSnapshot();
+  });
+});

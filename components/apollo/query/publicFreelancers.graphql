@@ -1,0 +1,13 @@
+query PublicFreelancers($page: Int, $per: Int) {
+  publicFreelancers(page: $page, per: $per) {
+    currentPage
+    totalPages
+    items {
+      id
+      genericTitle
+      genericAboutMe
+      aboutMe
+      prettyFreelancerTypes
+    }
+  }
+}

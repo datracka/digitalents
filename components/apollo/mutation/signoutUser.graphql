@@ -1,0 +1,12 @@
+mutation SignoutUser($email: String!){
+  signoutUser(email: $email) {
+    token
+    tmpAuthToken
+    tmpSignOutToken
+    redirectUrl
+    user {
+      email
+      id
+    }
+  }
+}

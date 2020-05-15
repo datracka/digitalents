@@ -1,0 +1,6 @@
+query translationsInPath($path: String!) {
+  translationsInPath(path: $path) {
+    key
+    value
+  }
+}

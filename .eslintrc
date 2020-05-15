@@ -1,0 +1,41 @@
+---
+  root: true
+  env:
+    browser: true
+    es6: true
+    jest: true
+    node: true
+  extends:
+    - eslint:recommended
+    - airbnb
+    - prettier
+  parser: babel-eslint
+  plugins:
+    - babel
+    - import
+    - jest
+    - react
+    - prettier
+    - emotion
+  rules:
+    prettier/prettier: error
+    emotion/jsx-import: error
+    emotion/no-vanilla: error
+    emotion/import-from-emotion: error
+    emotion/styled-import: error
+    react/prop-types: off
+    react/destructuring-assignment: off
+    jsx-a11y/anchor-is-valid:
+      - error:
+        aspects:
+         - invalidHref
+         - preferButton
+        components:
+          - Link
+        specialLink:
+          - hrefLeft
+          - hrefRight
+  settings:
+    import/resolver:
+      babel-module
+      

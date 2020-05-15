@@ -1,0 +1,22 @@
+fragment freelancerFieldsFragment on Freelancer {
+  aboutMe
+  availableHoursPerWeek
+  city
+  country
+  countryState
+  firstName
+  githubId
+  hourlyRate
+  id
+  lastName
+  linkedinUrl
+  maxTravelDistanceKm
+  onSiteAvailable
+  profileImageUrl
+  remoteHourlyRate
+  resumeUrl
+  website
+  freelancerTypes
+  xingUrl
+  zipCode
+}

@@ -1,0 +1,14 @@
+type Query {
+  errors: [Error]!
+  host: Host!
+}
+
+type Error {
+  message: String!
+  name: String!
+  statusCode: Number
+}
+
+type Host {
+  name: String!
+}

@@ -1,0 +1,22 @@
+query publicJobs($page: Int!, $per: Int!) {
+  publicJobs(page: $page, per: $per) {
+    items {
+      id
+      durationMinMonths
+      currencySymbol
+      headline
+      maxHourlyRate
+      qualifications
+      startDate
+      task
+      types
+    }
+    currentPage
+    nextPage
+    previousPage
+    size
+    totalItems
+    totalPages
+    lastPage
+  }
+}

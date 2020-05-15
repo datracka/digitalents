@@ -1,0 +1,10 @@
+#import "../fragments/freelancer.graphql"
+
+query freelancerProfile {
+  authenticatedUser {
+    id
+    freelancerProfile {
+      ...freelancerFieldsFragment
+    }
+  }
+}

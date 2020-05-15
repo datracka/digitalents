@@ -1,0 +1,10 @@
+mutation CreateUser($accountType: String!, $authProvider: AuthProviderSignupData!){
+  createUser(accountType: $accountType, authProvider: $authProvider) {
+    token
+    redirectUrl
+    user {
+      email
+      id
+    }
+  }
+}

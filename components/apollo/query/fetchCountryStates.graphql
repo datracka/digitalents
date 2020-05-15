@@ -1,0 +1,6 @@
+query allCountryStates($countryIso: String) {
+  allCountryStates(filter: { countryIso: $countryIso }) {
+    id isoCode name
+    country { isoCode }
+  }
+}

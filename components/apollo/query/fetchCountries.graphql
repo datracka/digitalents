@@ -1,0 +1,3 @@
+query allCountries {
+  allCountries { isoCode name }
+}

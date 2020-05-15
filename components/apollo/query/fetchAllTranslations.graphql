@@ -1,0 +1,11 @@
+query allTranslations {
+  allTranslations {
+    id
+    translationSlug {
+      id
+      category
+      name
+    }
+    value
+  }
+}

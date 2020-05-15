@@ -1,0 +1,8 @@
+query SelectErrors {
+  errors @client {
+    id
+    message
+    name
+    statusCode
+  }
+}

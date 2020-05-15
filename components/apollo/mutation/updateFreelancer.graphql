@@ -1,0 +1,53 @@
+#import "../fragments/freelancer.graphql"
+
+mutation updateFreelancer(
+  $firstName: String
+  $lastName: String
+  $aboutMe: String
+  $freelancerTypes: [String!]
+  $githubId: String
+  $linkedinUrl: String
+  $xingUrl: String
+  $website: String
+  $hourlyRate: Int
+  $remoteHourlyRate: Int
+  $availableHoursPerWeek: Int
+  $onSiteAvailable: Boolean
+  $maxTravelDistanceKm: Int
+  $city: String
+  $country: String
+  $countryState: String
+  $zipCode: String
+  $profileImageUrl: String
+  $resumeUrl: String
+  $submitApplication: Boolean
+) {
+  updateFreelancer(
+    firstName: $firstName
+    lastName: $lastName
+    aboutMe: $aboutMe
+    profileImageUrl: $profileImageUrl
+
+    freelancerTypes: $freelancerTypes
+    resumeUrl: $resumeUrl
+
+    githubId: $githubId
+    linkedinUrl: $linkedinUrl
+    xingUrl: $xingUrl
+    website: $website
+
+    remoteHourlyRate: $remoteHourlyRate
+    availableHoursPerWeek: $availableHoursPerWeek
+
+    hourlyRate: $hourlyRate
+    onSiteAvailable: $onSiteAvailable
+    maxTravelDistanceKm: $maxTravelDistanceKm
+    city: $city
+    country: $country
+    countryState: $countryState
+    zipCode: $zipCode
+    submitApplication: $submitApplication
+  ) {
+    ...freelancerFieldsFragment
+  }
+}

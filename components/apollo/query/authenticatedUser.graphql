@@ -1,0 +1,6 @@
+query authenticatedUser {
+  authenticatedUser {
+    id
+    email
+  }
+}

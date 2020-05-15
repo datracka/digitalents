@@ -1,0 +1,10 @@
+mutation SigninUser($email: AUTH_PROVIDER_EMAIL, $tmpAuthToken: String) {
+  signinUser(email: $email, tmpAuthToken: $tmpAuthToken) {
+    token
+    redirectUrl
+    user {
+      email
+      id
+    }
+  }
+}

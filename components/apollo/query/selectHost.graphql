@@ -1,0 +1,3 @@
+query selectHost {
+  host @client
+}

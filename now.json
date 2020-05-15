@@ -1,0 +1,9 @@
+{
+    "alias": "glnt",
+    "builds": [
+        { "src": "next.config.js", "use": "@now/next" }
+    ],
+    "name": "next",
+    "scope": "glolent",
+    "version": 2
+}
