@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import NetworkError from 'ui/NetworkError';
-import Modal, { useControlledModal } from 'ui/Modal';
 import Header from 'ui/Header';
 // import Gdpr from 'views/landingPage/Gdpr';
 import { getCookie, setCookie } from 'utils/cookies';
-import DefaultFooter from 'ui/Footer';
 // import ApplyNow from './ApplyNow';
 
 const Shell = styled.div`
@@ -15,12 +12,10 @@ const Shell = styled.div`
   flex-wrap: wrap;
 `;
 
-const DefaultLayout = ({ children, Footer, landingPage, ...rest }) => {
-  const [modalProps, toggle] = useControlledModal();
+const DefaultLayout = ({ children, landingPage }) => {
   React.useEffect(() => {
     if (!getCookie('euconsent')) {
       setCookie('euconsent', true, 9999);
-      toggle();
     }
   }, []);
   return (
@@ -42,10 +37,6 @@ const DefaultLayout = ({ children, Footer, landingPage, ...rest }) => {
 
 DefaultLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  Footer: PropTypes.func,
-};
-DefaultLayout.defaultProps = {
-  Footer: DefaultFooter,
 };
 
 export default DefaultLayout;

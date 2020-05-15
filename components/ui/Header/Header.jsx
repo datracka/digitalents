@@ -1,12 +1,9 @@
 import { useState } from 'react';
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import get from 'lodash/get';
-import SidebarAnimation from 'animations/SidebarAnimation';
 import Modal, { useControlledModal } from 'ui/Modal';
 
 import HeaderBar from './HeaderBar';
-import SideBar from './SideBar';
 import Burger from './Burger';
 import SignInModal from './SignInModal';
 import SignUpModal from './SignUpModal';

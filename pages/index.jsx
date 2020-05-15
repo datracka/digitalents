@@ -1,15 +1,7 @@
 import React from 'react';
 import DefaultLayout from 'layouts/DefaultLayout';
 
-import {
-  Faq,
-  Hero,
-  PoolOfFreelances,
-  WhyWorkWithUs,
-  Partners,
-  RemoteWorkDoneRight,
-  WhoWeAre,
-} from 'views/landingPage';
+import { Hero, WhyWorkWithUs } from 'views/landingPage';
 
 export default () => (
   <DefaultLayout landingPage>

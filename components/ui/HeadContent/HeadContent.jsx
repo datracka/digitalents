@@ -1,8 +1,6 @@
 import React from 'react';
-import getConfig from 'next/config';
-import Head from 'next/head';
 
-const { publicRuntimeConfig } = getConfig();
+import Head from 'next/head';
 
 export default ({ children }) => (
   <Head>

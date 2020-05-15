@@ -1,29 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import getConfig from 'next/config';
-import {
-  jobBoardPath,
-  aboutUsPath,
-  expertsPath,
-  blogPath,
-  podcastPath,
-  applicationPath,
-} from 'paths';
-import * as C from 'layouts/constants';
+
+import { jobBoardPath, expertsPath } from 'paths';
 import Box from './Box';
 import Header from './Header';
-import LogoGerlent from './LogoGerlent';
 import LogoGlolent from './LogoGlolent';
 import MenuLink from '../MenuLink';
-import Flags from '../Flags';
-import SignInButton from '../SignInButton';
-import SignUpButton from '../SignUpButton';
-import SignOut from '../SignOut';
-
-const { publicRuntimeConfig } = getConfig();
 
 const HeaderBar = ({ landingPage, sticky }) => {
-  const Logo = publicRuntimeConfig.site === C.SITE_GLOLENT ? LogoGlolent : LogoGerlent;
+  const Logo = LogoGlolent;
 
   return (
     <Header landingPage={landingPage} sticky={sticky}>
